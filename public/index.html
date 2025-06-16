@@ -1,110 +1,295 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DOPEcoin | Cannabis on the Blockchain</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>D.O.P.E. — The Department of Pot</title>
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #121212;
-      color: #fff;
-    }
-    header {
-      background: #1b1b1b;
-      text-align: center;
-      padding: 2rem 1rem;
-    }
-    header img {
-      max-width: 150px;
-      margin-bottom: 1rem;
-    }
-    header h1 {
-      font-size: 2.5rem;
-      margin: 0;
-    }
-    section.hero {
-      text-align: center;
-      padding: 3rem 1rem;
-    }
-    section.hero p {
-      font-size: 1.25rem;
-      max-width: 600px;
-      margin: 1rem auto;
-    }
-    .buttons a {
-      display: inline-block;
-      margin: 0.5rem;
-      padding: 1rem 2rem;
-      color: #fff;
-      background-color: #00c853;
-      text-decoration: none;
-      border-radius: 8px;
-      transition: background 0.3s;
-    }
-    .buttons a:hover {
-      background-color: #00b248;
-    }
-    footer {
-      text-align: center;
-      font-size: 0.9rem;
-      padding: 2rem 1rem;
-      background: #1b1b1b;
-      margin-top: 2rem;
-    }
-  </style>
+/* Reduce excess padding */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #080808;
+  color: #fff;
+}
+.header-dope {
+  font-size: 20rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+header {
+  font-family: Impact;
+  background: #080808;
+  text-align: center;
+}
+  header h1 {
+    font-size: 2.8rem;
+    letter-spacing: 0.4rem;
+    margin: 0;
+  }
+
+  header p {
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+    color: #ccc;
+  }
+
+  .buttons {
+    text-align: center;
+    margin: 1.5rem 0;
+  }
+  .buttons a {
+    display: inline-block;
+    margin: 0.4rem;
+    padding: 0.9rem 1.8rem;
+    color: #fff;
+    background-color: #00c853;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s;
+  }
+  .buttons a:hover {
+    background-color: #00b248;
+  }
+
+  section {
+  border: 1px solid white;
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 900px;
+  }
+
+  section h2 {
+  font-size: 3.3rem;
+  margin-top: 0;
+  margin-bottom: 0.3rem;
+  color: transparent;
+  -webkit-text-stroke: 1px #00e676; /* Outline effect */
+  text-stroke: 1px #00e676; /* Fallback for non-webkit (less supported) */
+  }
+  section h3 {
+  font-size: 3rem;
+  margin-top: 0;
+  margin-bottom: 0.3rem;
+  color: transparent;
+  -webkit-text-stroke: 1px #00e676; /* Outline effect */
+  text-stroke: 1px #00e676; /* Fallback for non-webkit (less supported) */
+  }
+  section h5 {
+  font-size: 1rem;
+  margin-top: 0;
+  margin-bottom: .1rem;
+  color: #00e676;
+  }
+  /* Logo avatar spacing fix */
+.section img {
+  float: left;
+  height: 400px;
+  margin: 0 1.5rem 3rem 0;
+}
+
+  .section-dark {
+  }
+
+  .division-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 900px;
+    text-align: left;
+    margin-bottom: 2rem;
+  }
+
+  .division-section img {
+    height: 220px;
+  }
+  .bigger img {
+    height: 280px;
+  }
+.bigger {
+    height: 400px;
+  }
+  .division-content {
+    max-width: 600px;
+  }
+
+  footer {
+    text-align: center;
+    font-size: 0.9rem;
+    padding: 1.5rem 1rem;
+    background: #1b1b1b;
+    margin-top: 2rem;
+  }
+
+  ul.tokenomics {
+    list-style: none;
+    padding: 0;
+    font-size: 1.1rem;
+    margin-top: 1.5rem;
+  }
+  /* Header Logo Alignment Fix */
+.logo-letter {
+  font-size: 12rem;
+  vertical-align: bottom;
+  margin: 0;
+}
+.dot {
+  font-size: 6rem;
+  vertical-align: bottom;
+  position: relative;
+  top: 65px; /* or whatever looks right visually */
+}
+.logo-img {
+  height: 180px;
+  vertical-align: middle;
+  position: relative;
+  top: -4px; /* lowers the image slightly */
+  margin: 0;
+}
+.icon-links {
+  display: flex;
+  justify-content: center;
+  gap: 7rem;
+  padding: .1rem;
+  margin-bottom: .5rem;
+}
+.icon-links img {
+  width: 68px;
+  height: 68px;
+  transition: transform 0.2s ease;
+  border-radius: 50%;
+  box-shadow: 0 0 15px 5px rgba(80, 79, 79, 0.4); /* soft grey glow */
+  background-color: transparent; /* remove solid fill */
+  padding: 1px; /* optional: adds space around icon */
+}
+
+.icon-links img:hover {
+  transform: scale(1.15);
+}
+
+</style>
+
 </head>
 <body>
-  <header>
-    <img src="logo_assets/vectorstock_25636754_transparent.png" alt="DOPEcoin Logo">
-    <h1>Welcome to DOPEcoin</h1>
-  </header>
+<header>
+<div class="header-dope">
+  <span class="logo-letter">D</span>
+  <span class="logo-letter dot">•</span>
+  <img src="logo_assets/vectorstock_52669293_transparent.png" alt="DOPE Logo" class="logo-img">
+  <span class="logo-letter dot">•</span>
+  <span class="logo-letter">P</span>
+  <span class="logo-letter dot">•</span>
+  <span class="logo-letter">E</span>
+</div>
 
-  <section class="hero">
-    <p>The future of cannabis meets the blockchain. DOPEcoin is the meme-powered community token blazing a trail through Web3 — with you at the helm.</p>
-    <div class="buttons">
-      <a href="https://juicebox.money/@dopecoin" target="_blank">View Presale</a>
-      <a href="https://discord.gg/Tmwm9kkwde" target="_blank">Join Discord</a>
-      <a href="https://snapshot.org/#/dopecoin.eth" target="_blank">Vote on Snapshot</a>
+</header>
+
+<div class="icon-links">
+  <a href="https://juicebox.money/@dopecoin" target="_blank">
+    <img src="logo_assets/juice-logo-icon_black.png" alt="Juicebox" />
+  </a>
+  <a href="https://discord.gg/Tmwm9kkwde" target="_blank">
+    <img src="logo_assets/discord.png" alt="Discord" />
+  </a>
+  <a href="https://snapshot.org/#/dopecoin.eth" target="_blank">
+    <img src="logo_assets/snapshot.png" alt="Snapshot" />
+  </a>
+  <a href="https://x.com/dopecoin48383" target="_blank">
+    <img src="logo_assets/xlogo.png" alt="X / Twitter" />
+  </a>
+</div>
+
+
+<section class="section">
+  <h2>Welcome to the Department of Pot!</h2><br><br>
+  <img src="logo_assets/vectorstock_25636754_transparent.png" alt="Leaf Mascot">
+  <h5>✅ A meme-powered satirical agency where cannabis culture meets Web3.</h5>
+  <br><h5>✅ Powered by DOPEcoin — a community-first ERC-20 token with no promises, just purpose.</h5>
+  <br><h5>✅ Four decentralized divisions: Enforcement, Enjoyment, Enhancement, and Economics.</h5>
+  <br><h5>✅ Mint a DOPE Agent NFT to access missions, perks, and your own customizable office.</h5>
+  <br><h5>✅ Every NFT evolves based on your reputation, activity, and gear earned through play.</h5>
+  <br><h5>✅ Members receive an ENS subdomain (e.g. <code>agent420.dopecoin.eth</code>) as digital ID.</h5>
+  <br><h5>✅ Faction-based challenges fuel engagement, visibility, and DOPE on-chain activity.</h5>
+  <br><h5>✅ A self-aware DAO that rewards culture & vibes — not speculation.</h5>
+ 
+</section>
+
+
+
+  <!-- Divisions -->
+  <section>
+  <h2>Which Department Will You Join?</h2><br>
+    <div class="division-section">
+      <img src="logo_assets/vectorstock_53828525.png" alt="Enforcement Logo" />
+      <div class="division-content">
+        <h5>Department of Pot </h5><h3>Enforcement</h3>
+        <h5>✅ Ensures the population is properly stoned and active within the DOPE ecosystem.</h5>
+      <h5>✅ Oversees onboarding, initiation rituals, and compliance with community vibes.</h5>
+      <h5>✅ Enforces “weed wisdom” across the DAO — part education, part discipline, all satire.</h5>
+      <h5>✅ Hosts faction-based contests and issues challenges to prove loyalty and honor.</h5>
+
+      </div>
     </div>
 
-  </section>
-<section class="about" style="text-align:center; padding: 3rem 1rem; background-color: #1e1e1e;">
-  <h2 style="font-size: 2rem; margin-bottom: 1rem;">What is DOPEcoin?</h2>
-  <p style="max-width: 700px; margin: 0 auto; font-size: 1.2rem;">
-    <strong>DOPEcoin is a community-driven meme token bringing cannabis culture to the blockchain.</strong><br><br>
-    From decentralized decision-making to NFT collabs, games, and presales — our mission is to empower users, fund cannabis innovation, and build a Web3 movement rooted in shared cannabis values.<br><br>
-    <strong>We call it the Crypto Cannabis Collective — get in and start shaping its future!</strong>
-  </p>
-</section>
-<section class="get-dope" style="text-align:center; padding: 3rem 1rem; background-color: #1b1b1b;">
-  <h2 style="font-size: 2rem; margin-bottom: 1rem;">How to Get DOPE</h2>
-  <p style="max-width: 700px; margin: 0 auto; font-size: 1.2rem;">
-    DOPEcoin is not available on public exchanges yet — but that’s about to change.
-  </p>
-  <p style="max-width: 700px; margin: 0 auto; font-size: 1.2rem;">
-    Join our presale, contribute to our Juicebox campaign, or follow us on Discord for updates as we roll out liquidity pools and more.
-  </p>
-  <div class="buttons">
-    <a href="https://juicebox.money/@dopecoin" target="_blank">Join Presale</a>
-    <a href="https://discord.gg/Tmwm9kkwde" target="_blank">Stay Updated</a>
-  </div>
-</section>
-<section class="tokenomics" style="text-align:center; padding: 3rem 1rem; background-color: #121212;">
-  <h2 style="font-size: 2rem; margin-bottom: 1rem;">Tokenomics</h2>
-  <p style="max-width: 700px; margin: 0 auto; font-size: 1.2rem;">
-    DOPEcoin has a fixed supply of <strong>10,000,000,000 DOPE</strong>, designed to empower the cannabis community in Web3.
-  </p>
-  <ul style="list-style: none; padding: 0; font-size: 1.1rem; margin-top: 2rem;">
-    <li>🔸 1.5B – Founder's Allocation (to be locked)</li>
-    <li>🔸 2.0B – Presale & Initial Liquidity</li>
-    <li>🔸 3.0B – Community & DAO Treasury</li>
-    <li>🔸 2.5B – Future Rewards, Airdrops & Collabs</li>
-    <li>🔸 1.0B – Ecosystem Fund</li>
-  </ul>
-</section>
+    <div class="division-section bigger" style="flex-direction: row-reverse;">
+      <img src="logo_assets/vectorstock_26587113_transparent.png" alt="Enjoyment Logo" />
+      <div class="division-content">
+        <h5>Department of Pot </h5><h3>Enjoyment</h3>
+     <h5>✅ Dedicated to maximizing community-wide enjoyment and good vibes.</h5>
+<h5>✅ Curates creative events, chill zones, playlists, art collabs, and snack lore.</h5>
+<h5>✅ Monitors community mood and dopamine levels — your happiness is policy.</h5>
+<h5>✅ Hosts art drops, meme competitions, and high-vibe creative rituals.</h5>
+ 
+      </div>
+    </div>
 
+    <div class="division-section">
+      <img src="logo_assets/vectorstock_52669293_transparent.png" alt="Enhancement Logo" />
+      <div class="division-content">
+        <h5>Department of Pot </h5><h3>Enhancement</h3>
+      <h5>✅ R&D lab for tools, NFTs, upgrades, and advanced stoner technologies.</h5>
+<h5>✅ Manages NFT trait evolution, item equipping, and office customization.</h5>
+<h5>✅ Oversees metaverse architecture and virtual “DOPE HQ” development.</h5>
+<h5>✅ Tests experimental mechanics and gamifies interaction across divisions.</h5>
+   
+      </div>
+    </div>
+
+    <div class="division-section bigger" style="flex-direction: row-reverse;">
+      <img src="logo_assets/vectorstock_42943527_transparent - Copy.png" class="bigger" alt="Economics Logo" />
+      <div class="division-content">
+        <h5>Department of Pot </h5><h3>Economics</h3>
+          <h5>✅ Acts as the DOPEcoin DAO’s central bank and economic brain trust.</h5>
+<h5>✅ Uses liquidity tools, velocity targets, and treasury management to stabilize value.</h5>
+<h5>✅ Oversees staking logic, reward loops, and presale-to-public supply strategy.</h5>
+<h5>✅ Aims to ensure sustainable DOPEcoin appreciation aligned with community growth.</h5>
+  
+      </div>
+    </div>
+  </section>
+
+<div class="icon-links">
+  <a href="https://juicebox.money/@dopecoin" target="_blank">
+    <img src="logo_assets/juice-logo-icon_black.png" alt="Juicebox" />
+  </a>
+  <a href="https://discord.gg/Tmwm9kkwde" target="_blank">
+    <img src="logo_assets/discord.png" alt="Discord" />
+  </a>
+  <a href="https://snapshot.org/#/dopecoin.eth" target="_blank">
+    <img src="logo_assets/snapshot.png" alt="Snapshot" />
+  </a>
+  <a href="https://x.com/dopecoin48383" target="_blank">
+    <img src="logo_assets/xlogo.png" alt="X / Twitter" />
+  </a>
+</div>
 
   <footer>
     &copy; 2025 DOPEcoin. All rights reserved. | <a href="mailto:team@dopecoin.meme" style="color:#00c853; text-decoration:none;">Contact</a>
